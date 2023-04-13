@@ -1,0 +1,7 @@
+{
+  "debug.terminal.clearBeforeReusing": true,
+  "jupyter.exportWithOutputEnabled": true,
+  "npm.runInTerminal": false,
+  "code-runner.runInTerminal": false,
+  "editor.fontFamily": "Proggy, 'Courier New', monospace"
+}
