@@ -1,2 +1,3 @@
 # PlayGround
-Web responsive Design courtesy of freecodecamp.org
+Web Responsive Design courtesy of freecodecamp.org
+Python and C scripts inclusive.
