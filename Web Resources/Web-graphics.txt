@@ -1,0 +1,265 @@
+A function is a piece of code that can take an input and perform a specific action. 
+The CSS rgb function accepts values, or arguments, for red, green, and blue, and produces a color:
+	->rgb(red, green, blue);
+
+Each red, green, and blue value is a number from 0 to 255. 
+0 means that there's 0% of that color, and is black. 
+255 means that there's 100% of that color.
+
+In the .one CSS rule, replace the color keyword red with the rgb function.
+For the rgb function, set the value for red to 255, the value for green to 0, and the value for blue to 0.
+
+A color wheel is a circle where similar colors, or hues, are near each other, and different ones are further apart.
+For example, pure red is between the hues rose and orange.
+Two colors that are opposite from each other on the color wheel are called complementary colors.
+If two complementary colors are combined, they produce gray.
+But when they are placed side-by-side, these colors produce strong visual contrast and appear brighter.
+
+In the rgb function for the .one CSS rule, set the red value to the max of 255 to produce pure red.
+In the rgb function for .two CSS rule, set the values for green and blue to the max of 255 to produce cyan.
+
+A very common way to apply color to an element with CSS is with hexadecimal or hex values.
+While hex values sound complicated, they're really just another form of RGB values.
+
+Hex color values start with a # character and take six characters from 0-9 and A-F.
+The first pair of characters represent red, the second pair represent green, and the third pair represent blue.
+For example, #4B5320.
+
+In the .green class selector, set the background-color property to a hex color code with the values 00 for red,
+FF for green, and 00 blue.
+
+You may already be familiar with decimal, or base 10 values, which go from 0 - 9.
+Hexadecimal, or base 16 values, go from 0 - 9, then A - F:
+
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+With hex colors, 00 is 0% of that color, and FF is 100%.
+So #00FF00 translates to 0% red, 100% green, and 0% blue, and is the same as rgb(0, 255, 0).
+
+Lower the intensity of green by setting the green value of the hex color to 7F.
+
+The HSL color model, or hue, saturation, and lightness, is another way to represent colors.
+
+The CSS hsl function accepts 3 values: a number from 0 to 360 for hue, a percentage from 0 to 100 for saturation, and a percentage from 0 to 100 for lightness.
+
+If you imagine a color wheel, the hue red is at 0 degrees, green is at 120 degrees, and blue is at 240 degrees.
+
+Saturation is the intensity of a color from 0%, or gray, to 100% for pure color. You must add the percent sign % to the saturation and lightness values.
+
+Lightness is how bright a color appears, from 0%, or complete black, to 100%, complete white, with 50% being neutral.
+
+In the .blue CSS rule, use the hsl function to change the background-color property to pure blue.
+Set the hue to 240, the saturation to 100%, and the lightness to 50%.
+
+You've learned a few ways to set flat colors in CSS, but you can also use a color transition, or gradient, on an element.
+
+A gradient is when one color transitions into another. The CSS linear-gradient function lets you control the direction of the transition along a line, and which colors are used.
+
+One thing to remember is that the linear-gradient function actually creates an image element, and is usually paired with the background property which can accept an image as a value.
+
+In the .red CSS rule, change the background-color property to background.
+
+The linear-gradient function is very flexible -- here is the basic syntax you'll use in this tutorial:
+
+linear-gradient(gradientDirection, color1, color2, ...);
+gradientDirection is the direction of the line used for the transition.
+color1 and color2 are color arguments, which are the colors that will be used in the transition itself.
+These can be any type of color, including color keywords, hex, rgb, or hsl.
+
+Now you'll apply a red-to-green gradient along a 90 degree line to the first marker.
+
+First, in the .red CSS rule, set the background property to linear-gradient(),
+and pass it the value 90deg as the gradientDirection.
+
+Color-stops allow you to fine-tune where colors are placed along the gradient line. They are a length unit like px or percentages that follow a color in the linear-gradient function.
+
+For example, in this red-black gradient, the transition from red to black takes place at the 90% point along the gradient line, so red takes up most of the available space:
+
+linear-gradient(90deg, red 90%, black);
+In the linear-gradient function, add a 75% color stop after the first red color argument.
+Do not add color stops to the other colors arguments.
+
+Opacity describes how opaque, or non-transparent, something is. For example, a solid wall is opaque, and no light can pass through. But a drinking glass is much more transparent, and you can see through the glass to the other side.
+
+With the CSS opacity property, you can control how opaque or transparent an element is. With the value 0, or 0%, the element will be completely transparent, and at 1.0, or 100%, the element will be completely opaque like it is by default.
+
+In the .sleeve CSS rule, set the opacity property to 0.5.
+
+Another way to set the opacity for an element is with the alpha channel. Similar to the opacity property, the alpha channel controls how transparent or opaque a color is.
+
+You've already set sleeve's opacity with a named color and the opacity property, but you can add an alpha channel to the other CSS color properties.
+
+Inside the .sleeve rule, remove the opacity property and value.
+
+You're already familiar with using the rgb function to set colors. To add an alpha channel to an rgb color, use the rgba function instead.
+
+The rgba function works just like the rgb function, but takes one more number from 0 to 1.0 for the alpha channel:
+
+rgba(redValue, greenValue, blueValue, alphaValue);
+You can also use an alpha channel with hsl and hex colors. You will see how to do that soon.
+
+In the .sleeve rule, use the rgba function to set the background-color property to pure white with 50% opacity.
+
+The last thing you'll do is add a slight shadow to each marker to make them look even more realistic.
+
+The box-shadow property lets you apply one or more shadows around an element. Here is basic syntax:
+
+box-shadow: offsetX offsetY color;
+Here's how the offsetX and offsetY values work:
+
+both offsetX and offsetY accept number values in px and other CSS units
+a positive offsetX value moves the shadow right and a negative value moves it left
+a positive offsetY value moves the shadow down and a negative value moves it up
+if you want a value of zero (0) for any or both offsetX and offsetY, you don't need to add a unit. Every browser understands that zero means no change.
+The height and width of the shadow is determined by the height and width of the element it's applied to.
+You can also use an optional spreadRadius value to spread out the reach of the shadow. More on that later.
+
+Start by adding a simple shadow to the red marker.
+
+In the .red CSS rule, add the box-shadow property with the values 5px for offsetX, 5px for offsetY, and red for color.
+
+But what if you wanted to expand the shadow out further? You can do that with the optional spreadRadius value:
+
+box-shadow: offsetX offsetY blurRadius spreadRadius color;
+Like blurRadius, spreadRadius defaults to 0 if it isn't included.
+
+Practice by adding a 5 pixel shadow directly around the blue marker.
+
+In the .blue CSS rule,
+	add the box-shadow property with the values 0 for offsetX, 0 for offsetY, 0 for blurRadius, 5px for spreadRadius,
+	and blue for color.
+
+The vh unit stands for viewport height, and is relative to 1% of the height of the viewport.
+
+It is time to spruce the project up with some CSS. Begin by giving the body a width of 100%, and a height of 100vh.
+
+The method attribute specifies how to send form-data to the URL specified in the action attribute.
+The form-data can be sent via a GET request as URL parameters (with method="get") or via a POST request as data in the request body (with method="post").
+
+Set the method attribute to send your form data via a POST request.
+
+The rem unit stands for root em, and is relative to the font size of the html element.
+
+As label elements are inline by default, they are all displayed side by side on the same line, making their text hard to read.
+To make them appear on separate lines, add display: block to the label element, and add a margin of 0.5rem 0, to separate them from each other.
+
+Specifying the type attribute of a form element is important for the browser to know what kind of data it should expect. If the type is not specified, the browser will default to text.
+
+Give the first two input elements a type attribute of text, the third a type attribute of email, and the fourth a type attribute of password.
+
+The email type only allows emails with a @ and a . in the domain.
+The password type obscures the input, and warns if the site does not use HTTPS.
+
+Certain type attribute values come with built-in form validation. For example, type="email" requires that the value be a valid email address.
+
+Add custom validation to the password input element, by adding a minlength attribute with a value of 8.
+Doing so prevents inputs of less than 8 characters being submitted.
+
+With type="password" you can use the pattern attribute to define a regular expression that the password must match to be considered valid.
+
+Add a pattern attribute to the password input element to require the input match: [a-z0-5]{8,}
+
+The above is a regular expression which matches eight or more lowercase letters or the digits 0 to 5.
+Then, remove the minlength attribute, and try it out.
+
+Adding a dropdown to the form is easy with the select element. The select element is a container for a group of option elements, and the option element acts as a label for each dropdown option. Both elements require closing tags.
+
+Start by adding a select element below the two label elements.
+Then nest 5 option elements within the select element.
+
+Submitting the form with an option selected would not send a useful value to the server. As such, each option needs to be given a value attribute. Without which, the text content of the option will be submitted to the server.
+
+Give the first option a value of "", and the subsequent option elements value attributes from 1 to 4.
+
+he textarea element acts like an input element of type text, but comes with the added benefit of being able to receive multi-line text, and an initial number of text rows and columns.
+
+Users will be able to register with a bio. Add a label with the text Provide a bio: at the end of the fieldset.
+Add a textarea element inside the label element. Note that the textarea requires a closing tag.
+
+The placeholder accepts a text value, which is displayed until the user starts typing.
+To give Campers an idea of what to put in their bio, the placeholder attribute is used.
+
+With form submissions, it is useful, and good practice, to provide each submittable element with a name attribute. This attribute is used to identify the element in the form submission.
+
+Give each submittable element a unique name attribute of your choosing, except for the two radio inputs.
+
+The border of the last fieldset element looks a little out of place. You can select the last element of a specific type using the last-of-type CSS pseudo-class, like this:
+
+p:last-of-type { }
+That will select the last p element.
+Create a new selector that targets the last fieldset element and set its border-bottom to none.
+
+The content is surrounded by a space called padding, similar to how bubble wrap separates an item from the box around it.
+
+Think of the border like the cardboard box your item was shipped in.
+
+Margin is the area outside of the box, and can be used to control the space between other boxes or elements.
+
+Here the bottom element has a larger top margin, pushing it further down the page.
+
+Use the filter property to blur the painting by 2px in the .canvas element.
+
+Here's an example of a rule that add a 3px blur:
+
+p {
+  filter: blur(3px);
+}
+
+The border-radius property accepts up to four values to round the top-left, top-right, bottom-right, and bottom-left corners.
+
+Rotate each rectangle to give them more of an imperfect, hand-painted look.
+
+Use the transform property on the .one selector to rotate it counter clockwise by 0.6 degrees.
+
+Flexbox is a one-dimensional CSS layout that can control the way items are spaced out and aligned within a container.
+
+To use it, give an element a display property of flex. This will make the element a flex container. Any direct children of a flex container are called flex items.
+
+Create a .gallery selector and make it a flex container.
+
+Flexbox has a main and cross axis. The main axis is defined by the flex-direction property, which has four possible values:
+
+row (default): horizontal axis with flex items from left to right
+row-reverse: horizontal axis with flex items from right to left
+column: vertical axis with flex items from top to bottom
+column-reverse: vertical axis with flex items from bottom to top
+Note: The axes and directions will be different depending on the text direction. The values shown are for a left-to-right text direction.
+
+Try the different values to see how they affect the layout.
+
+When you are done, set an explicit flex-direction of row on the .gallery element.
+
+The flex-wrap property determines how your flex items behave when the flex container is too small. Setting it to wrap will allow the items to wrap to the next row or column. nowrap (default) will prevent your items from wrapping and shrink them if needed.
+
+Make it so your flex items wrap to the next row when they run out of space.
+
+The justify-content property determines how the items inside a flex container are positioned along the main axis, affecting their position and the space around them.
+
+Give your .gallery selector a justify-content property with center as the value.
+
+The align-items property positions the flex content along the cross axis. In this case, with your flex-direction set to row, your cross axis would be vertical.
+
+To vertically center your images, give your .gallery selector an align-items property with center as the value.
+
+Notice how some of your images have become distorted. This is because the images have different aspect ratios. Rather than setting each aspect ratio individually, you can use the object-fit property to determine how images should behave.
+
+Give your .gallery img selector the object-fit property and set it to cover.
+This will tell the image to fill the img container while maintaining aspect ratio, resulting in cropping to fit.
+
+Your images need some space between them.
+
+The gap CSS shorthand property sets the gaps, also knowns as gutters, between rows and columns. The gap property and its row-gap and column-gap sub-properties provide this functionality for flex, grid, and multi-column layout. You apply the property to the container element.
+
+Give your .gallery flex container a gap property with 16px as the value.
+
+The ::after pseudo-element creates an element that is the last child of the selected element.
+You can use it to add an empty element after the last image.
+If you give it the same width as the images it will push the last image to the left when the gallery is in a two-column layout. Right now, it is in the center because you set justify-content: center on the flex container.
+
+Example:
+
+.container::after {
+  content: "";
+  width: 860px;
+}
+Create a new selector using an ::after pseudo-element on the .gallery element.
+Add a content property set to an empty string "" and 350px set for the width property.
