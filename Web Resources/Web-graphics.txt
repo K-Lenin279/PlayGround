@@ -263,3 +263,25 @@ Example:
 }
 Create a new selector using an ::after pseudo-element on the .gallery element.
 Add a content property set to an empty string "" and 350px set for the width property.
+
+Create an h1 rule and set the font-weight property to 800. This will make your h1 text bolder.
+
+The letter-spacing property can be used to adjust the space between each character of text in an element.
+
+Horizontal spacing between equally important elements can increase the readability of your text.
+
+Wrap the text 2/3 cup (55g) in a span element.
+
+The rem unit stands for root em, and is relative to the font size of the html element.
+
+Create a .small-text selector and set the font-size to 0.85rem,
+	which would calculate to roughly 13.6px (remember that you set your html to have a font-size of 16px).
+
+The :not pseudo-selector can be used to select all elements that do not match the given CSS rule.
+
+div:not(#example) {
+  color: red;
+}
+The above selects all div elements without an id of example.
+
+Modify your .daily-value p selector to exclude the .no-divider elements.
