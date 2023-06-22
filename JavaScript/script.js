@@ -93,3 +93,15 @@ function updateRecords(records, id, prop, value) {
 }
 
 console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
+
+function reverseWords(str) {
+  return str
+    .split(' ')
+    .map(value => {
+      return value.split('').reverse().join('');
+    })
+    .join(' ');
+}
+
+string = 'This is an example!';
+console.log(reverseWords(string));
